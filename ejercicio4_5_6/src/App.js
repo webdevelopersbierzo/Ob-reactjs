@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import ComponenteA from './components/componentaA';
+import ClockFunctional from './Components/ClockFunctional';
+//import Clock from './Components/Clock';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ComponenteA name="Oscar" surname="Corral Garcia" email="prueba@prueba.com" ></ComponenteA>
+        {/* <Clock></Clock> */}
+        <ClockFunctional></ClockFunctional>
       </header>
+      
     </div>
   );
 }
