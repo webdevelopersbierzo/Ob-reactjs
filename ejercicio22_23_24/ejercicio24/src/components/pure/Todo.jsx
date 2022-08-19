@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 const Todo = ({onClick, completed, text, id}) => {
     return (
         <div>
-            <li onclick={onClick}
+            <li onClick={onClick}
                 style={
                     {
-                        textDecoration: completed ? 'line-through' : 'none',
+                        textDecoration: completed ? 'line-through': 'none',
                         textDecorationColor: completed ? 'green' : 'none',
                         color: completed ? 'green' : 'white'
                     }

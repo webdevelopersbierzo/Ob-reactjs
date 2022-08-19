@@ -25,7 +25,7 @@ const TodoList = ({todos, onTodoClick}) => {
 
 
 TodoList.propTypes = {
-    todo:PropTypes.arrayOf(
+    todos:PropTypes.arrayOf(
         PropTypes.shape(
             {
                 id:PropTypes.number.isRequired,

@@ -14,9 +14,9 @@ const TodoForm = ({submit}) => {
                 newText.current.value = '';
             }}>
                 <input type='text' ref={newText}/>
-                <buttom type='submit'>
+                <button type='submit'>
                     Create buttom
-                </buttom>
+                </button>
             </form>
         </div>
     );
