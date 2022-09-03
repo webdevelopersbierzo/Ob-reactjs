@@ -20,6 +20,7 @@ const Heading = () => {
             <Link to='/' >
                 <h1 style={{paddingLeft:10}}>TaskApp</h1>
             </Link>
+            
             <Link to='/add'>
                 <Button   
                     variant='contained'

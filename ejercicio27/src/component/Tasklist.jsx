@@ -1,4 +1,4 @@
-import React,{ useContext} from 'react';
+import React,{ useContext, useEffect, useRef} from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import {  Box, Card, CardActions, CardContent, CardHeader, IconButton, ToggleButton, Typography, } from '@mui/material';
 import { Delete, Edit,  DoneAllOutlined} from '@mui/icons-material'
@@ -8,10 +8,15 @@ import { Link } from 'react-router-dom';
 const Tasklist = () => {
     
     const context = useContext( GlobalContext);
-    const {deleteTask} = useContext(GlobalContext);
     
+    const {deleteTask,updateTask} = useContext(GlobalContext);
+    
+    const handleChange= task=>{
+        
+        task.isDone = !task.isDone  
+        updateTask(task)
+    }
    
-    
     return (
         <Box sx={
             {
@@ -52,9 +57,15 @@ const Tasklist = () => {
                                     <Edit></Edit>
                                 </IconButton>
                             </Link>
-                            <ToggleButton value='true'                            
+                            <ToggleButton value='true' onClick={()=>handleChange(task)}                            
                             >
-                                <DoneAllOutlined></DoneAllOutlined>
+                                {task.isDone ? 
+                                    <DoneAllOutlined color='success'/>
+                                    :
+                                    <DoneAllOutlined color='warning'/>
+ 
+                                }
+                                
                             </ToggleButton>
                             
                         </CardActions>

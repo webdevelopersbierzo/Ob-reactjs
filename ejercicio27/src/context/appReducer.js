@@ -18,21 +18,18 @@ export default function appReducer(state, action){
         const updateTasks= state.tasks.map(task =>{
             if(task.id === updateTask.id){
                 task.title = updateTask.title;
-                task.description = updateTask.description;
-                
+                task.description = updateTask.description; 
             }
             return task;
-            
         })
+        
         return {
             tasks:updateTasks
-        };
+        }
         
-       }
+       }       
        default:
-            return state;
-    
-        
+            return state;   
     }
 
 }
