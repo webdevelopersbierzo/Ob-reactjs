@@ -2,8 +2,8 @@ import React from 'react';
 import {Box, Button} from '@mui/material';
 import { Link } from 'react-router-dom';
 import{ Add } from '@mui/icons-material';
-import { blueGrey, lightBlue, teal } from '@mui/material/colors';
-import { placements } from '@popperjs/core';
+import {  lightBlue } from '@mui/material/colors';
+
 
 const Heading = () => {
     return (
