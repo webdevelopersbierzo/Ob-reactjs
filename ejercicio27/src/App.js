@@ -6,6 +6,7 @@ import {Routes , Route} from 'react-router-dom';
 import './App.css';
 import { Box } from '@mui/material';
 import { ContextProvider } from './context/GlobalContext';
+import TaskUndone from './component/TaskUndone';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path='/' element={<Tasklist/>} ></Route>
         <Route path='/add' element={<Taskform/>}></Route>
         <Route path='/edit/:id' element={<Taskform/>}></Route>
-      
+        <Route path='/FilterTask' element={<TaskUndone/>}></Route>
       </Routes>
       <Footer></Footer>
     </ContextProvider>

@@ -39,7 +39,7 @@ export const ContextProvider = ({children})=>{
     const updateTask = (task) => {
         dispatch({type: 'UPDATE_TASK', payload:task})
     }
-    
+        
     return <GlobalContext.Provider value={{...state, addTask, deleteTask, updateTask}}>
         {children}
     </GlobalContext.Provider>

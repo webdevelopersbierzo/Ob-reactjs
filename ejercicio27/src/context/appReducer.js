@@ -27,7 +27,7 @@ export default function appReducer(state, action){
             tasks:updateTasks
         }
         
-       }       
+       }    
        default:
             return state;   
     }
