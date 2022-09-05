@@ -15,7 +15,14 @@ const TaskUndone = () => {
         
     task.isDone = !task.isDone  
     updateTask(task)
-}
+   
+    }
+    useEffect(() => {
+      setStateFilter(updateTask)
+    
+      
+    }, [updateTask])
+    
     
     return (
         <div>
